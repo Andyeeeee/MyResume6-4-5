@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>典籍打開側邊攔</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .open-btn {
+      font-size: 30px;
+      cursor: pointer;
+      /* position: fixed; */
+      top: 20px;
+      left: 20px;
+      z-index: 9999;
+      height: 50px;
+      position: fixed;
+
+    }
+
+    .open-btn:hover {
+      color: #fff;
+    }
+
+    .menu-icon {
+      font-size: 30px;
+    }
+
+    .sidebar {
+      min-height: calc(100vh - 50px);
+      margin: 50px;
+      width: 100%;
+      /* position: fixed; */
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      display: none;
+      /* 初始隱藏 */
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+
+    <button class="open-btn" onclick="toggleSidebar()">
+      <span class="menu-icon">&#9776;</span>
+    </button>
+
+
+
+    <div class="sidebar" id="sidebar">
+
+      <a href="#">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+      <a href="#">Item 4</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".open-btn").click(function () {
+        $("#sidebar").toggle();
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>典籍打開側邊攔</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    .open-btn {
+      font-size: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 9999;
+    }
+
+    .open-btn:hover {
+      color: #fff;
+    }
+
+    .menu-icon {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar" id="sidebar">
+    <a href="#" onclick="toggleSidebar()">&times; Close</a>
+    <a href="#">Item 1</a>
+    <a href="#">Item 2</a>
+    <a href="#">Item 3</a>
+    <a href="#">Item 4</a>
+  </div>
+  <button class="open-btn" onclick="toggleSidebar()">
+    <span class="menu-icon">&#9776;</span>
+  </button>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      if (sidebar.style.left === "-250px") {
+        sidebar.style.left = "0";
+      } else {
+        sidebar.style.left = "-250px";
+      }
+    }
+  </script>
+</body>
+
+</html>

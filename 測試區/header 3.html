@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../package/Bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../../style/css/style.css">
+
+  <title>典籍打開側邊攔</title>
+
+
+  <style>
+    /* ::-webkit-scrollbar {
+      width: 0px;
+    } */
+
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: #818181;
+      height: 60px;
+    }
+
+    .sidebar {
+      top: 60px;
+      height: calc(100vh - 60px);
+      width: 100%;
+      overflow-y: auto;
+    }
+
+    #sidebar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="header position-fixed w-100">
+      <ul class="d-flex">
+        <li class="d-md-none"> <button class="open-btn">
+            <span class="menu-icon">&#9776;</span>
+          </button></li>
+        <li><a href="">123</a></li>
+        <li><a href="">123</a></li>
+        <li><a href="">123</a></li>
+        <li class="ms-auto"><a href="">123</a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar d-md-none position-fixed" id="sidebar" style="background-color: chocolate;">
+      <ul class="d-flex justify-content-around text-center">
+        <li class=""><a href="">我的文件</a></li>
+        <li class=""><a href="">我的相關經歷</a></li>
+        <li class=""><a href="">我的興趣</a></li>
+
+
+      </ul>
+
+      <hr style="color: #3a1d1d;font-size: 20px;height: 20px;">
+      <div class="vh-100">100vh</div>
+      <div class="vh-100">100vh</div>
+      <div class="vh-100">100vh</div>
+
+    </div>
+
+
+  </header>
+  <div style="background-color: rgb(129, 127, 255);height:75vh;"> </div>
+  <div style="background-color: rgb(127, 255, 185);height:75vh;"> </div>
+
+  <script src="../../package/Bootstrap/bootstrap.bundle.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".open-btn").click(function () {
+        $("#sidebar").toggle();
+        $("body").toggleClass("no-scroll");
+      });
+    });
+  </script>
+</body>
+
+</html>

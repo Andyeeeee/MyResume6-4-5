@@ -1,0 +1,11 @@
+#left-bar {
+  margin-top: 60px;
+  position: fixed;
+  height: calc(100vh - 50px);
+  padding: 10px;
+  background-color: rgb(57, 57, 57);
+  color: rgb(147, 121, 255);
+  width: inherit;
+  overflow-y: auto;
+
+}
