@@ -1,11 +1,14 @@
-leftbar-compment {
+.doc-left-box {
+
+
   width: 200px;
-  left: 0;
+  left: -200px;
+  position: fixed;
   transition: left 0.3s ease
 }
 
-@media (min-width: 768px) {
-  leftbar-compment {
-    left: -200px;
+@include md {
+  .doc-left-box {
+    left: 0px;
   }
 }

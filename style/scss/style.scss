@@ -1,6 +1,8 @@
-@import "_index.scss";
-@import "_all.scss";
-@import "_LeftBar.scss";
+@import "mixins/rwd";
+@import "_variables.scss";
+@import "./global.scss";
 
+@import "_index.scss";
+@import "_LeftBar.scss";
 @import "_header.scss";
 // @import "../../compoment/nav.scss"
