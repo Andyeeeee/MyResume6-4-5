@@ -9,6 +9,10 @@ customElements.define('header-compment', class extends HTMLElement {
   overflow: hidden;
 }
 
+.close-icon{
+  display:none
+}
+
 </style>
 
       <header id="nav">
@@ -16,8 +20,8 @@ customElements.define('header-compment', class extends HTMLElement {
       <nav class="header position-fixed w-100">
         <ul class="d-flex">
           <li class="d-md-none"> <button class="open-btn">
-          <span class="menu-icon">&#9776;</span>
-          <span class="close-icon d-none">&#10006;</span>
+          <span class="menu-icon" style="color:black">&#x2261;</span>
+          <span class="close-icon ">&#10006;</span>
             </button></li>
           <li><a href="">123</a></li>
           <li><a href="">123</a></li>

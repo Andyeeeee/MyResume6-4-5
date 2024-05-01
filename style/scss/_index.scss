@@ -1,0 +1,11 @@
+leftbar-compment {
+  width: 200px;
+  left: 0;
+  transition: left 0.3s ease
+}
+
+@media (min-width: 768px) {
+  leftbar-compment {
+    left: -200px;
+  }
+}
