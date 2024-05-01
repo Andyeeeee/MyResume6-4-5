@@ -27,17 +27,17 @@
   <header-compment></header-compment>
   <div class="box d-flex">
 
-    <leftbar-compment class="doc-left-box"></leftbar-compment>
-    <main></main>
+    <leftbar-compment class="doc-left-box"> </leftbar-compment>
+    <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
+    <main class="main-content">asd</main>
+
   </div>
   <ul class="d-flex">
     <li>asd</li>
     <li>asd</li>
     <li>asd</li>
   </ul>
-  <div style="height: 100vh;background-color: cadetblue;"></div>
-  <div style="height: 100vh;background-color: cadetblue;"></div>
-  <div style="height: 100vh;background-color: cadetblue;"></div>
+
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
   <script src="package/Bootstrap/bootstrap.bundle.js"></script>
@@ -47,6 +47,18 @@
 
   <script>
     console.log("html");
+
+    function toggleSidebar() {
+      var docLeftBox = document.querySelector('.doc-left-box');
+      var mainContent = document.querySelector('.main-content');
+      if (docLeftBox.style.left === '-200px') {
+        docLeftBox.style.left = '0';
+        mainContent.style.marginLeft = '200px';
+      } else {
+        docLeftBox.style.left = '-200px';
+        mainContent.style.marginLeft = '0';
+      }
+    }
   </script>
 </body>
 
