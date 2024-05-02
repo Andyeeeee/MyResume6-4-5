@@ -29,11 +29,6 @@
       height: 0;
       transition: height 0.3s ease-out;
     }
-
-    .accordion-content.active {
-      height: auto;
-      /* 讓內容高度自適應內容大小 */
-    }
   </style>
 </head>
 
@@ -64,12 +59,10 @@
     // JavaScript 代码
     function toggleAccordion(xx) {
       var content = xx.nextElementSibling;
-      if (content.classList.contains('active')) {
-        content.style.height = '0';
-        content.classList.remove('active');
-      } else {
+      if (content.style.height === '0px' || content.style.height === '') {
         content.style.height = content.scrollHeight + 'px';
-        content.classList.add('active');
+      } else {
+        content.style.height = '0px';
       }
     }
   </script>

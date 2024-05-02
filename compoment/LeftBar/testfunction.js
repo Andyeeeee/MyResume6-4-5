@@ -1,10 +1,10 @@
 function toggleAccordion(xx) {
-  var content = xx.nextElementSibling;
-  if (content.classList.contains('active')) {
-    content.style.height = '0';
-    content.classList.remove('active');
-  } else {
+  let content = xx.nextElementSibling;
+  if (content.style.height === '0px' || content.style.height === '') {
     content.style.height = content.scrollHeight + 'px';
-    content.classList.add('active');
+  } else {
+    content.style.height = '0px';
   }
 }
+
+console.log("test");

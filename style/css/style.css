@@ -94,23 +94,21 @@ a {
   margin: 0 auto;
 }
 #left-bar .accordion-item {
-  border: 1px solid #ff0000;
+  border: 1px solid #5ee1ff;
   margin-bottom: 10px;
 }
 #left-bar .accordion-header {
-  background-color: #aeaeae;
+  background-color: #919191;
+  color: white;
   padding: 10px;
   cursor: pointer;
 }
 #left-bar .accordion-content {
   overflow: hidden;
   padding: 0px;
-  -webkit-transition: height 0.2s ease;
-  transition: height 0.2s ease;
-}
-#left-bar .accordion-content.active {
-  height: auto;
-  /* 讓內容高度自適應內容大小 */
+  height: 0;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
 }
 
 #left-bar::-webkit-scrollbar {
