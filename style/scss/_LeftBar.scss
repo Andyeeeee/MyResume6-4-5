@@ -7,5 +7,8 @@
   color: rgb(147, 121, 255);
   width: inherit;
   overflow-y: auto;
+}
 
+#left-bar::-webkit-scrollbar {
+  width: 0;
 }

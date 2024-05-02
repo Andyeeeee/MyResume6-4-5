@@ -24,19 +24,64 @@
 
 
 <body>
-  <header-compment></header-compment>
+  <header-compment id="header-compment"></header-compment>
+
   <div class="box d-flex">
 
     <leftbar-compment class="doc-left-box"> </leftbar-compment>
-    <button class="toggle-btn" onclick="toggleSidebar()">Toggle Sidebar</button>
-    <main class="main-content">asd</main>
+
+    <div class="main-content w-100">
+      <div class="bar-hide d-none d-md-block">
+        <button id="sidebar-toggle">
+          &#8596;</button>
+      </div>
+      <div>
+        ssssssssssssssssssssssssssssss3
+      </div>
+      <div>123</div>
+
+
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+    </div>
 
   </div>
-  <ul class="d-flex">
-    <li>asd</li>
-    <li>asd</li>
-    <li>asd</li>
-  </ul>
+
 
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
@@ -47,18 +92,33 @@
 
   <script>
     console.log("html");
+    document.getElementById('sidebar-toggle').addEventListener('click', function () {
+      let leftbar = document.querySelector('.doc-left-box');
+      let mainContent = document.querySelector('.main-content');
+      let barHide = document.querySelector('.bar-hide');
 
-    function toggleSidebar() {
-      var docLeftBox = document.querySelector('.doc-left-box');
-      var mainContent = document.querySelector('.main-content');
-      if (docLeftBox.style.left === '-200px') {
-        docLeftBox.style.left = '0';
+      if (leftbar.style.left === '-200px') {
+        leftbar.style.left = '0';
         mainContent.style.marginLeft = '200px';
+        barHide.style.left = '200px';
       } else {
-        docLeftBox.style.left = '-200px';
+        leftbar.style.left = '-200px';
         mainContent.style.marginLeft = '0';
+        barHide.style.left = '0px';
       }
-    }
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth < 768) { // 根据需要调整断点值
+        document.querySelector('.doc-left-box').style.left = '-200px';
+        document.querySelector('.main-content').style.marginLeft = '0';
+        document.querySelector('.bar-hide').style.left = '0';
+      } else {
+        document.querySelector('.doc-left-box').style.left = '0px';
+        document.querySelector('.main-content').style.marginLeft = '200px';
+        document.querySelector('.bar-hide').style.left = '200px';
+      }
+    });
   </script>
 </body>
 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Sidebar Dropdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      height: 100vh;
+      width: 200px;
+      background-color: #333;
+      color: white;
+      padding-top: 20px;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      padding: 10px;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .sidebar ul li ul {
+      display: none;
+      background-color: #444;
+    }
+
+    .sidebar ul li:hover ul {
+      display: block;
+    }
+
+    .main-content {
+      margin-left: 0;
+      padding: 20px;
+    }
+
+    @media (min-width: 570px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .main-content {
+        margin-left: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li>
+        <a href="#">Products</a>
+        <ul>
+          <li><a href="#">All Products</a></li>
+          <li><a href="#">Add Product</a></li>
+          <li><a href="#">Edit Product</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Customers</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content" style="background-color: chartreuse;">
+    <h1>Main Content</h1>
+    <p>This is the main content area.</p>
+  </div>
+
+</body>
+
+</html>

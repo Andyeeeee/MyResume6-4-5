@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Scroll</title>
+  <style>
+    /* 左側滾動條樣式 */
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: red;
+      border-radius: 5px;
+    }
+
+    /* 右側滾動條樣式 */
+    #mainContent::-webkit-scrollbar {
+      width: 10px;
+      background-color: transparent;
+    }
+
+    #mainContent::-webkit-scrollbar-thumb {
+      background-color: green;
+      border-radius: 5px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      height: 50vh;
+      background-color: #f0f0f0;
+      overflow-y: auto;
+      /* Always show vertical scrollbar */
+    }
+
+
+
+    .main-content {
+      flex: 1;
+      height: 50vh;
+      overflow-y: auto;
+      /* Always show vertical scrollbar */
+    }
+
+    .no-scroll {
+      overflow-y: hidden;
+      /* Hide scrollbar */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar" id="sidebar">
+
+    <!-- Your dropdown menu content here -->
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+  </div>
+  <div class="main-content" id="mainContent">
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+  </div>
+
+</body>
+
+</html>
