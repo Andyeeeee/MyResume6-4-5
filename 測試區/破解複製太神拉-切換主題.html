@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.9/theme-chalk/index.css">
+  <style>
+    body {
+      padding: 50px 100px;
+      background-color: var(--background-color);
+    }
+
+    .box {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--box-shadow)
+    }
+
+    .box:hover {
+      box-shadow: var(--box-shadow-hover)
+    }
+
+    .box .text {
+      color: var(--text-color);
+    }
+
+    .box .text-sub {
+      margin-top: 10px;
+      color: var(--text-color-sub);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn">
+    <button mode="light" class="el-button el-button--primary">明亮模式</button>
+    <button mode="read" class="el-button el-button--success">阅读模式</button>
+    <button mode="dark" class="el-button el-button--warning">暗黑模式</button>
+  </div>
+  <div class="box">
+    <div class="text">凯小默的博客</div>
+    <div class="text-sub">测试切换不同主题模式</div>
+    <h3 class="text">当前模式：<span class="cur-mode"></span></h3>
+  </div>
+  <script>
+    // 模式配置
+    const modeOptions = {
+      light: {
+        '--background-color': '#fff',
+        '--box-shadow': '0 1px 8px 0 rgba(0, 0, 0, 0.1)',
+        '--box-shadow-hover': '0 2px 16px 0 rgba(0, 0, 0, 0.2)',
+        '--text-color': '#242424',
+        '--text-color-sub': '#7F7F7F',
+        '--border-color': '#eaecef',
+      },
+      read: {
+        '--background-color': '#f5f5d5',
+        '--box-shadow': '0 1px 8px 0 rgba(0, 0, 0, 0.1)',
+        '--box-shadow-hover': '0 2px 16px 0 rgba(0, 0, 0, 0.2)',
+        '--text-color': '#004050',
+        '--text-color-sub': '#7F7F7F',
+        '--border-color': 'rgba(0, 0, 0, 0.15)',
+      },
+      dark: {
+        '--background-color': '#181818',
+        '--box-shadow': '0 1px 8px 0 rgba(255, 255, 255, .6)',
+        '--box-shadow-hover': '0 2px 16px 0 rgba(255, 255, 255, .7)',
+        '--text-color': 'rgba(255, 255, 255, .8)',
+        '--text-color-sub': '#8B8B8B',
+        '--border-color': 'rgba(255, 255, 255, .3)',
+      }
+    }
+    // 设置模式
+    function setMode(mode) {
+      const rootElement = document.querySelector(':root');
+      const options = modeOptions[mode];
+      // 遍历设置
+      for (const k in options) {
+        rootElement.style.setProperty(k, options[k]);
+      }
+      rootElement.setAttribute("data-theme", mode);
+      // 当前模式
+      const curMode = document.querySelector('.cur-mode');
+      curMode.innerHTML = mode;
+    }
+    // 初始设置为明亮模式
+    setMode("light");
+
+    document.querySelector(".btn").addEventListener("click", (e) => {
+      setMode(e.target.getAttribute("mode"));
+    })
+  </script>
+</body>
+
+</html>

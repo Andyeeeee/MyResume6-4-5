@@ -32,6 +32,26 @@
     #sidebar {
       display: none;
     }
+
+    li {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        height: 100%;
+        padding: 0 20px;
+        display: inline-block;
+        background-color: burlywood;
+        align-items: center;
+        line-height: 60px;
+      }
+    }
+
+    button {
+      margin: 0 20px;
+    }
   </style>
 </head>
 
@@ -39,28 +59,31 @@
 
   <header id="nav">
 
-    <nav class="header position-fixed w-100">
-      <ul class="d-flex">
-        <li class="d-md-none"> <button class="open-btn">
+    <nav class="header position-fixed w-100" style="padding:0 20px;">
+      <ul class="d-flex h-100" style="align-items: center;">
+        <li class="d-lg-none"> <button class="open-btn">
             <span class="menu-icon">&#9776;</span>
           </button></li>
-        <li><a href="">123</a></li>
-        <li><a href="">123</a></li>
-        <li><a href="">123</a></li>
-        <li class="ms-auto"><a href="">123</a></li>
+        <li><a href="">首頁</a></li>
+        <li class="d-none d-lg-block"><a href="/page/doc/docAboutMe.html">文件</a></li>
+        <li class="d-none d-lg-block"><a href="">經歷</a></li>
+        <li class="d-none d-lg-block"><a href="">興趣</a></li>
+        <li class="ms-auto"><button>主題開關</button></li>
+        <li><a href="">github</a></li>
       </ul>
     </nav>
 
-    <div class="d-md-none position-fixed w-100 sidebar" id="sidebar" style="background-color: chocolate;">
+    <div class="d-lg-none position-fixed w-100 sidebar" id="sidebar" style="background-color: chocolate;">
       <ul class="d-flex justify-content-around text-center">
-        <li class=""><a href="">我的文件</a></li>
-        <li class=""><a href="">我的相關經歷</a></li>
-        <li class=""><a href="">我的興趣</a></li>
+        <li class=""><a href="/index.html">文件</a></li>
+        <li class=""><a href="">經歷</a></li>
+        <li class=""><a href="">興趣</a></li>
 
 
       </ul>
 
       <hr style="color: #3a1d1d;font-size: 20px;height: 20px;">
+      <leftbar-compment style="width: 100%;"></leftbar-compment>
 
       <div id="LeftBar"></div>
 
@@ -73,6 +96,7 @@
 
   <script src="../../package/Bootstrap/bootstrap.bundle.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="compoment/LeftBar/LeftBar-c.js"></script>
   <!-- <script type="module" src="../../index.js"></script> -->
 
 

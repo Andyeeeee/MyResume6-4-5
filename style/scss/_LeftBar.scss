@@ -1,5 +1,5 @@
 #left-bar {
-  margin-top: 60px;
+  // margin-top: 60px;
   position: fixed;
   height: calc(100vh - 50px);
   padding: 10px;
@@ -7,6 +7,38 @@
   color: rgb(147, 121, 255);
   width: inherit;
   overflow-y: auto;
+}
+
+#left-bar {
+
+  /* 基本的 CSS 样式 */
+  .accordion {
+    // max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .accordion-item {
+    border: 1px solid #ff0000;
+    margin-bottom: 10px;
+  }
+
+  .accordion-header {
+    background-color: #aeaeae;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .accordion-content {
+    overflow: hidden;
+    padding: 0px;
+    // height: 0;
+    transition: height 0.2s ease;
+  }
+
+  .accordion-content.active {
+    height: auto;
+    /* 讓內容高度自適應內容大小 */
+  }
 }
 
 #left-bar::-webkit-scrollbar {

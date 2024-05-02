@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   padding: 0;
   margin: 0;
@@ -15,11 +16,21 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --primary-color: #007bff;
+  /* 主要顏色 - 藍色 */
+  --secondary-color: #28a745;
+  /* 次要顏色 - 綠色 */
+  --tertiary-color: #dc3545;
+  /* 第三顏色 - 紅色 */
+}
+
 #header-compment {
   margin-bottom: 60px;
 }
 
 .doc-left-box {
+  margin-top: 60px;
   width: 200px;
   left: -200px;
   height: 100%;
@@ -44,7 +55,7 @@ a {
 .bar-hide {
   position: fixed;
   top: 60px;
-  left: 0px;
+  left: -50px;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
 }
@@ -55,7 +66,7 @@ a {
   font-size: 25px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .doc-left-box {
     left: 0px;
   }
@@ -67,7 +78,6 @@ a {
   }
 }
 #left-bar {
-  margin-top: 60px;
   position: fixed;
   height: calc(100vh - 50px);
   padding: 10px;
@@ -77,10 +87,39 @@ a {
   overflow-y: auto;
 }
 
+#left-bar {
+  /* 基本的 CSS 样式 */
+}
+#left-bar .accordion {
+  margin: 0 auto;
+}
+#left-bar .accordion-item {
+  border: 1px solid #ff0000;
+  margin-bottom: 10px;
+}
+#left-bar .accordion-header {
+  background-color: #aeaeae;
+  padding: 10px;
+  cursor: pointer;
+}
+#left-bar .accordion-content {
+  overflow: hidden;
+  padding: 0px;
+  -webkit-transition: height 0.2s ease;
+  transition: height 0.2s ease;
+}
+#left-bar .accordion-content.active {
+  height: auto;
+  /* 讓內容高度自適應內容大小 */
+}
+
 #left-bar::-webkit-scrollbar {
   width: 0;
 }
 
+#nav .no-scroll {
+  overflow: hidden;
+}
 #nav .header {
   background-color: #818181;
   height: 60px;
@@ -92,28 +131,27 @@ a {
 #nav #sidebar {
   display: none;
 }
-#nav .container {
-  display: inline-block;
-  cursor: pointer;
+#nav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-#nav .bar1,
-#nav .bar2,
-#nav .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+#nav li button {
+  margin: 0 20px;
 }
-#nav .open-btn.change .bar1 {
-  -webkit-transform: translate(0, 11px) rotate(-45deg);
-          transform: translate(0, 11px) rotate(-45deg);
-}
-#nav .open-btn.change .bar2 {
-  opacity: 0;
-}
-#nav .open-btn.change .bar3 {
-  -webkit-transform: translate(0, -11px) rotate(45deg);
-          transform: translate(0, -11px) rotate(45deg);
+#nav li a {
+  height: 100%;
+  padding: 0 20px;
+  display: block;
+  background-color: burlywood;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 60px;
 }

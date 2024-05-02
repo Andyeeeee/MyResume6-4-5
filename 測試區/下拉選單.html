@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>側邊欄下拉捲單範例</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 200px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #f1f1f1;
+      padding-top: 20px;
+    }
+
+    .dropdown-btn {
+      padding: 10px 15px;
+      width: 100%;
+      border: none;
+      background-color: inherit;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      padding-left: 20px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      color: black;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <button class="dropdown-btn " onclick="toggleDropdown('dropdownContent1')">下拉選單 1</button>
+    <div class="dropdown-content" id="dropdownContent1">
+      <a href="#">選項 1</a>
+      <a href="#">選項 2</a>
+      <a href="#">選項 3</a>
+    </div>
+    <button class="dropdown-btn" onclick="toggleDropdown('dropdownContent2')">下拉選單 2</button>
+    <div class="dropdown-content" id="dropdownContent2">
+      <a href="#">選項 A</a>
+      <a href="#">選項 B</a>
+      <a href="#">選項 C</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(id) {
+      var dropdownContent = document.getElementById(id);
+      dropdownContent.classList.toggle("active");
+    }
+  </script>
+
+</body>
+
+</html>

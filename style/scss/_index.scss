@@ -3,6 +3,7 @@
 }
 
 .doc-left-box {
+  margin-top: 60px;
   width: 200px;
   left: -200px;
   height: 100%;
@@ -28,7 +29,7 @@
 .bar-hide {
   position: fixed;
   top: 60px;
-  left: 0px;
+  left: -50px;
   transition: left 0.3s ease;
 }
 
@@ -47,7 +48,7 @@
 // }
 
 
-@include md {
+@include lg {
   .doc-left-box {
     left: 0px;
   }

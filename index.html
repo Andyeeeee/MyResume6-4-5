@@ -14,74 +14,30 @@
     background-color: burlywood;
   }
 
-  /* .box {
-      width: 100px;
-      height: 100px;
-      background-color: lightblue;
-      cursor: pointer;
-    } */
+  .yeee {
+    height: 80vh;
+  }
+
+  .qq {
+    width: 80%;
+    height: 80%;
+    background-color: cornflowerblue;
+    font-size: 50px;
+    font-weight: bolder;
+    border-radius: 50%;
+  }
 </style>
 
 
 <body>
   <header-compment id="header-compment"></header-compment>
 
-  <div class="box d-flex">
 
-    <leftbar-compment class="doc-left-box"> </leftbar-compment>
-
-    <div class="main-content w-100">
-      <div class="bar-hide d-none d-md-block">
-        <button id="sidebar-toggle">
-          &#8596;</button>
-      </div>
-      <div>
-        ssssssssssssssssssssssssssssss3
-      </div>
-      <div>123</div>
-
-
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
-      <div>123</div>
+  <div class="yeee d-flex justify-content-center align-items-center">
+    <div class="qq">
+      目前首頁沒想法
     </div>
-
   </div>
-
 
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
@@ -90,35 +46,11 @@
   <script src="compoment/header/herder-c.js"></script>
   <script src="compoment/LeftBar/LeftBar-c.js"></script>
 
+
+  <script src="/compoment/LeftBar/testfunction.js"></script>
   <script>
     console.log("html");
-    document.getElementById('sidebar-toggle').addEventListener('click', function () {
-      let leftbar = document.querySelector('.doc-left-box');
-      let mainContent = document.querySelector('.main-content');
-      let barHide = document.querySelector('.bar-hide');
 
-      if (leftbar.style.left === '-200px') {
-        leftbar.style.left = '0';
-        mainContent.style.marginLeft = '200px';
-        barHide.style.left = '200px';
-      } else {
-        leftbar.style.left = '-200px';
-        mainContent.style.marginLeft = '0';
-        barHide.style.left = '0px';
-      }
-    });
-
-    window.addEventListener('resize', function () {
-      if (window.innerWidth < 768) { // 根据需要调整断点值
-        document.querySelector('.doc-left-box').style.left = '-200px';
-        document.querySelector('.main-content').style.marginLeft = '0';
-        document.querySelector('.bar-hide').style.left = '0';
-      } else {
-        document.querySelector('.doc-left-box').style.left = '0px';
-        document.querySelector('.main-content').style.marginLeft = '200px';
-        document.querySelector('.bar-hide').style.left = '200px';
-      }
-    });
   </script>
 </body>
 

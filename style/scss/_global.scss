@@ -14,3 +14,12 @@ a {
   color: white;
   text-decoration: none;
 }
+
+:root {
+  --primary-color: #007bff;
+  /* 主要顏色 - 藍色 */
+  --secondary-color: #28a745;
+  /* 次要顏色 - 綠色 */
+  --tertiary-color: #dc3545;
+  /* 第三顏色 - 紅色 */
+}

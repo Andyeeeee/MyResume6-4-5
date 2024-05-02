@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../package/Bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../../style/css/style.css">
+  <title>Document</title>
+</head>
+
+<style>
+  body {
+    background-color: burlywood;
+  }
+
+  /* .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      cursor: pointer;
+    } */
+</style>
+
+
+<body>
+  <header-compment id="header-compment"></header-compment>
+
+  <div class="box d-flex">
+
+    <leftbar-compment class="doc-left-box"> </leftbar-compment>
+
+    <div class="main-content w-100">
+      <div class="bar-hide d-none d-md-block">
+        <button id="sidebar-toggle">
+          &#8596;</button>
+      </div>
+      <div>
+        ssssssssssssssssssssssssssssss3
+      </div>
+      <div>123</div>
+
+
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+    </div>
+
+  </div>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
+  <script src="../../package/Bootstrap/bootstrap.bundle.js"></script>
+
+  <script src="../../compoment/header/herder-c.js"></script>
+  <script src="../../compoment/LeftBar/LeftBar-c.js"></script>
+
+  <script>
+    console.log("html");
+    document.getElementById('sidebar-toggle').addEventListener('click', function () {
+      let leftbar = document.querySelector('.doc-left-box');
+      let mainContent = document.querySelector('.main-content');
+      let barHide = document.querySelector('.bar-hide');
+
+      if (leftbar.style.left === '-200px') {
+        leftbar.style.left = '0';
+        mainContent.style.marginLeft = '200px';
+        barHide.style.left = '200px';
+      } else {
+        leftbar.style.left = '-200px';
+        mainContent.style.marginLeft = '0';
+        barHide.style.left = '0px';
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth < 992) { // 根据需要调整断点值
+        document.querySelector('.doc-left-box').style.left = '-200px';
+        document.querySelector('.main-content').style.marginLeft = '0';
+        document.querySelector('.bar-hide').style.left = '-50px';
+      } else {
+        document.querySelector('.doc-left-box').style.left = '0px';
+        document.querySelector('.main-content').style.marginLeft = '200px';
+        document.querySelector('.bar-hide').style.left = '200px';
+      }
+    });
+
+
+
+
+    //     window.addEventListener('resize', function () {
+    //   if (window.innerWidth > 768) {
+    //     if (!manualClose) {
+    //       document.querySelector('.doc-left-box').style.left = '0px';
+    //       document.querySelector('.main-content').style.marginLeft = '200px';
+    //       document.querySelector('.bar-hide').style.left = '-50px'; // 完全隐藏
+    //     } else {
+    //       document.querySelector('.doc-left-box').style.left = '0px';
+    //       document.querySelector('.main-content').style.marginLeft = '200px';
+    //       document.querySelector('.bar-hide').style.left = '0px'; // 显示但不触发开关
+    //     }
+    //   } else {
+    //     document.querySelector('.doc-left-box').style.left = '-200px';
+    //     document.querySelector('.main-content').style.marginLeft = '0';
+    //     document.querySelector('.bar-hide').style.left = '-50px'; // 完全隐藏
+    //   }
+    // });
+
+  </script>
+</body>
+
+</html>

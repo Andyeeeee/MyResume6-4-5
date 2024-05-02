@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Navbar</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      height: 60px;
+      /* 设置导航栏高度为60px */
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      height: 60px;
+      /* 设置导航栏高度为60px */
+    }
+
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    a {
+      display: block;
+      padding: 0 10px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      line-height: 60px;
+      /* 设置链接的行高与导航栏高度相同 */
+    }
+
+    a:hover {
+      background-color: #555;
+    }
+
+    /* 
+    @media (max-width: 768px) {
+      li {
+        flex-grow: unset;
+        width: 100%;
+      }
+    } */
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><button>asd</button></li>
+    </ul>
+  </nav>
+</body>
+
+</html>
