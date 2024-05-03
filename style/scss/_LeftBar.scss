@@ -31,10 +31,28 @@
 
   .accordion-content {
     overflow: hidden;
-    padding: 00px;
+    padding: 0px;
     height: 0;
     transition: height 0.3s ease;
+    list-style: armenian;
   }
+
+  .accordion-content li {
+    text-align: center;
+    padding: 2px 0;
+  }
+
+  .accordion-content li:hover {
+    background-color: #d7d7d7;
+    border-radius: 10px;
+  }
+
+  .accordion-content li a {
+    color: rgb(147, 121, 255);
+    font-size: 20px;
+  }
+
+
 }
 
 #left-bar::-webkit-scrollbar {

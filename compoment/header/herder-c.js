@@ -24,7 +24,7 @@ customElements.define('header-compment', class extends HTMLElement {
   <span class="close-icon ">&#10006;</span>
     </button></li>
     <li><a href="/index.html">首頁</a></li>
-    <li class="d-none d-lg-block"><a href="/page/doc/docAboutMe.html">文件</a></li>
+    <li class="d-none d-lg-block"><a href="page/doc/docAboutMe.html">文件</a></li>
     <li class="d-none d-lg-block"><a href="">經歷</a></li>
     <li class="d-none d-lg-block"><a href="">興趣</a></li>
     <li class="ms-auto"><button>主題開關</button></li>
@@ -34,7 +34,7 @@ customElements.define('header-compment', class extends HTMLElement {
 
 <div class="d-lg-none position-fixed w-100 sidebar" id="sidebar" style="background-color: chocolate;">
   <ul class="d-flex justify-content-around text-center">
-    <li class=""><a href="/page/doc/docAboutMe.html">文件</a></li>
+    <li class=""><a href="page/doc/docAboutMe.html">文件</a></li>
     <li class=""><a href="">經歷</a></li>
     <li class=""><a href="">興趣</a></li>
 
